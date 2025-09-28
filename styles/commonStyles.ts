@@ -1,6 +1,7 @@
 
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
+// Light theme colors
 export const colors = {
   // Transportation-focused color palette
   primary: '#1e40af',      // Deep blue for primary elements
@@ -16,6 +17,23 @@ export const colors = {
   border: '#e5e7eb',       // Light grey for borders
   grey: '#9ca3af',         // Medium grey
   card: '#ffffff',         // White for cards
+};
+
+// Dark theme colors
+export const darkColors = {
+  primary: '#3b82f6',
+  secondary: '#60a5fa',
+  success: '#34d399',
+  warning: '#fbbf24',
+  danger: '#f87171',
+  background: '#111827',
+  backgroundAlt: '#1f2937',
+  surface: '#1f2937',
+  text: '#f9fafb',
+  textSecondary: '#d1d5db',
+  border: '#374151',
+  grey: '#6b7280',
+  card: '#1f2937',
 };
 
 export const buttonStyles = StyleSheet.create({
