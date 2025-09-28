@@ -89,6 +89,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onClose }) => {
               styles.themeOptionText,
               {
                 color: themeMode === mode ? 'white' : colors.text,
+                color: themeMode === mode ? 'dark' : colors.text, 
               },
             ]}
           >
