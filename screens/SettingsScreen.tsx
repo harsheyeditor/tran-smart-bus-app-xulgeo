@@ -70,9 +70,13 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onClose }) => {
     </Pressable>
   );
 
-  const ThemeSelector = () => (
+  const ThemeSelector = () => {
+  // Define the theme options array
+  const themeOptions = ['light', 'dark', 'system'];
+  
+  return (
     <View style={styles.themeSelector}>
-      {(['light', 'dark', 'system'] as const).map((mode) => (
+      {themeOptions.map((mode) => (
         <Pressable
           key={mode}
           style={[
@@ -80,7 +84,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onClose }) => {
             {
               backgroundColor: themeMode === mode ? colors.primary : colors.surface,
               borderColor: colors.border,
-            },
+            }
           ]}
           onPress={() => setThemeMode(mode)}
         >
@@ -89,8 +93,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onClose }) => {
               styles.themeOptionText,
               {
                 color: themeMode === mode ? 'white' : colors.text,
-                color: themeMode === mode ? 'dark' : colors.text, 
-              },
+              }
             ]}
           >
             {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -99,6 +102,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onClose }) => {
       ))}
     </View>
   );
+};
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
